@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--The meta elements are useless (i think), but we should have it anyways-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, intial-scale=1.0">
+    <meta name="keywords" content="HTML, CSS">
+    <meta name="description" content="Climate change is an ever growing issue throughout the globe.
+            We must utilize renewable energy sources">
+    <!--This line loads the css sheet!!-->
+    <link rel="stylesheet" href="../website.css">
+    <link rel="icon" href="../images/FAVICON.svg">
+    <title>
+        Alternative Energy
+    </title>
+    <!--Font loader (copy and pasted code from fonts.google.com)-->
+    <!--Readex Pro-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap" rel="stylesheet">
+    <!--Jost-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Readex+Pro:wght@160..700&display=swap"
+        rel="stylesheet">
+    <!--Open Sans-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <!--Rethink Sans-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap"
+        rel="stylesheet">
+
+
+</head>
+
+<body>
+    <nav>
+        <label class="logo">
+            <a href="https://flhs.flboe.com/">FLHS</a>
+        </label>
+        <ul>
+            <li><a href="../index.html" title="Home">Home</a></li>
+            <li><a href="bioEnergys.html" title="Biofuel">Biofuel</a></li>
+            <li><a href="solar.html" title="Solar">Solar</a></li>
+            <li><a href="nuclear.html" title="Nuclear">Nuclear</a></li>
+            <li><a href="map.html" title="Interactive Map">Interactive Map</a></li>
+        </ul>
+    </nav>
+
+    <div class="solarContainer">
+        <h1 class="header">
+            SOLAR ENERGY
+
+        </h1>
+    </div>
+
+    <h1 class="sectionHeader" id="Introduction" style="   margin-left: auto; margin-right: auto;">Introduction</h1>
+
+    <div class="rectangle" style="height: 450px;margin-bottom: -450px;">
+        <h1 class="headerTOC">Sections</h1>
+        <a class="elementTOC" href="#Introduction"> — Introduction</a>
+        <br>
+        <a class="elementTOC" href="#Semiconductor"> — The Semiconductor</a>
+        <br>
+        <a class="elementTOC" href="#Doping"> — Doping</a>
+        <br>
+        <a class="elementTOC" href="#Junctions"> — P—N Junctions, the PV Effect, and Generation</a>
+        <br>
+        <a class="elementTOC" href="#Benefits"> — Benefits and Pitfalls</a>
+        <br>
+        <a class="elementTOC" href="#Sources"> — Sources</a>
+    </div>
+
+    <div class="container">
+        <a href="https://theroundup.org/solar-power-statistics/" target="blank">
+            <img class="left"
+                src="https://theroundup.org/wp-content/uploads/2022/02/global-annual-solar-energy-production.png"
+                alt="Solar energy throughout the years." title="CLICK FOR SOURCE">
+        </a>
+    </div>
+
+    <p class="details">
+        The Earth is an astonishing 93 million miles away from the Sun, yet it takes only 8 minutes and 20 seconds for
+        its light to reach us. Plants use their energy for growth; animals need plants to survive; without heat from the
+        Sun, Earth would freeze; solar energy enables life on Earth to flourish. Solar energy is energy that comes from
+        the sun. Unlimited, inexhaustible, and clean, many turn to solar energy to answer the world’s climate crisis.
+        Humans have learned to harness this energy through the use of solar panels, an increasingly prevalent method of
+        generating zero-emission energy. Solar panels are a revolutionary evolution in the energy sector; they help
+        reduce our dependence on fossil fuels such as coal and oil, and they can help repurpose land that was previously
+        used for non-renewable energy generation. Not only does solar energy currently have the power to completely end
+        the energy crisis—much of the infrastructure required to harness it already exists, and averaged across a year,
+        for every square meter on Earth, we receive roughly 342 watts of energy<sup><a href="#1">[1]</a></sup>—but
+        widespread adoption of
+        solar panels can create jobs, stimulate economic growth, and make energy cheaper for everyone around the
+        world.<sup><a href="#2">[2]</a></sup>
+        Developing green infrastructure enhances the resilience and sustainability of cities. Moreover,
+        solar panels can serve as a catalyst for innovation and research in materials science, engineering, and energy
+        storage technologies, driving advancements that benefit society as a whole.
+    </p>
+    <br>
+    <br>
+    <p class="details">
+        This surge in adoption reflects a growing awareness of the need for sustainable energy sources amidst concerns
+        over climate change and environmental degradation. However, the widespread deployment of solar panels raises
+        questions about their inner workings, prompting a deeper exploration into the science behind their
+        functionality.<sup><a href="#3">[3]</a></sup><sup><a href="#4">[4]</a></sup>
+        Before examining how solar panels work, we first need to review some important concepts that are now ubiquitous
+        in everyday life: the concepts of semiconductors (primarily silicon) and doping, a process by which impurities
+        are purposefully introduced to semiconductors to improve conductivity. Semiconductors are the unsung hero of the
+        modern world; not only are they fundamental to the discussion of solar panels, but they also play a major role
+        in our everyday lives; they are fundamental components of transistors, which are electronic gates that control
+        electrical signals, and are used in almost every electronic device today, including integrated circuits,
+        electronic components that can perform complex tasks,<sup><a href="#5">[5]</a></sup><sup><a
+                href="#6">[6]</a></sup> and, of course, the focus of
+        this section, solar cells, which are electronic components used in solar panels that convert sunlight to
+        electricity.<sup><a href="#7">[7]</a></sup>
+
+    </p>
+    <br>
+    <br>
+    <h1 class="sectionHeader" id="Semiconductor" style="font-size: 30px">The Semiconductor</h1>
+    <p class="details">
+        “Semiconductor shortages,” “Silicon Valley,” phones, tablets, computers—you might have heard conversations
+        involving the word “semiconductor” on the news. However, to many, semiconductors are confounding, foreign
+        objects, beyond explanation. To understand what semiconductors are, we need to review some basic information
+        regarding conductors and insulators. A conductor is any material that can easily conduct energy, or more
+        appropriately, can freely transfer electrons. Metals are good at conducting electricity, meaning they can easily
+        transfer electrons from one object to another. The atoms in metals form a medium through which electrons can
+        easily enter and leave. An insulator is any object that resists the flow of electricity. The atoms of insulating
+        materials are tightly bound, meaning electrons are unable to move freely. For example, the tightly bound
+        electrons in insulators like rubber are not shared between neighboring atoms.
+    </p>
+    <br>
+    <br>
+    <div class="container">
+        <a href="https://en.wikipedia.org/wiki/Silicon" target="blank">
+            <img class="right" src="https://upload.wikimedia.org/wikipedia/commons/e/e9/SiliconCroda.jpg"
+                alt="Solar energy throughout the years." title="CLICK FOR SOURCE">
+        </a>
+    </div>
+    <p class="details">
+        A semiconductor is an element, compound, or material that conducts electricity under specific conditions.
+        Counterintuitively, think of a semiconductor as an element that has both the electrical conductivity of an
+        insulator and a conductor. Because it is neither a good insulator nor a good conductor, they are useful in
+        controlling electric current. Semiconductors have neither the tendency to gain nor lose electrons, as their
+        valence shells tend to contain four electrons. Because the electrical conductivity of semiconductors can change
+        with applied current, they are ideal components of photovoltaic systems.<sup><a href="#8">[8]</a></sup>
+    </p>
+    <br>
+    <br>
+    <p class="details">
+        Because of its reliability, compatibility with existing processes, energy efficiency, compact potential,<sup><a
+                href="#9">[9]</a></sup> and abundance (silicon is the second most abundant element in the earth’s
+        crust),<sup><a href="#10">[10]</a></sup>
+        silicon (Si) of Group XVI is the most widely used semiconductor material in the industry. It is worth noting
+        that because the conductivity of silicon is low, it, in its purest form, is not an ideal electrical component.
+        Silicon has 14 electrons across its three shells—two in its first, eight in its second, yet only four in its
+        third and final shell. Its final (valence) shell is only half full. Because silicon has four valence electrons,
+        again, with neither a tendency to gain nor lose electrons, when bonded together, they arrange themselves in a
+        strong crystal lattice (a repeated pattern or arrangement of atoms or ions) where electrons cannot freely move,
+        a concept inherent to its semiconducting properties.<sup><a href="#5">[5]</a></sup> Each valence electron of
+        silicon bonds to
+        another valence electron from its neighboring silicon, leaving no holes or excess electrons, which is one reason
+        why pure silicon a bad conductor. And hence, doping.
+    </p>
+    <br>
+    <br>
+    <h1 class="sectionHeader" id="Doping" style="font-size: 30px">Doping</h1>
+    <p class="details">
+        Another reason why silicon is widely used in the production of semiconductors is because it can easily be doped
+        by impurities to improve their conductivity; solar cells can’t work without doping. Similar to how people may
+        use drugs to improve their physical performance, or rather dope, doping within the context of electronics at the
+        atomic level is a process that entails introducing foreign elements to semiconductors to improve conductivity.
+        Traditionally, doping occurs at around one ppm (parts per million) up to 1,000 ppm.<sup><a
+                href="#11">[11]</a></sup>
+        As stated in the previous section, silicon in its crystal lattice has no free electrons because it has four
+        valence electrons, each bonding to one atom of silicon.
+    </p>
+    <br>
+    <br>
+    <div class="container">
+        <a href="https://eng.libretexts.org/Bookshelves/Materials_Science/Supplemental_Modules_(Materials_Science)/Solar_Basics/D._P-N_Junction_Diodes/I._P-Type%2C_N-Type_Semiconductors"
+            target="blank">
+            <img class="left"
+                src="https://files.mtstatic.com/site_7337/3260/0?Expires=1715552937&Signature=BEjqDhQLG2vJxEQdCLnBP9EWnAI~SogFO6CNQ3gl0JWQo~UBx3ouogh7j3fmZE5N9qxyPQMFtvfmRBC~oeXHyd6xZs4Di04iu-Lef8jgb4tTh7N3bUpI52UiiDWhKweSiwW~D8-mDa1b~LXq-f8yQfJp-I4n9jF3bq~QvaSkHJo_&Key-Pair-Id=APKAJ5Y6AV4GI7A555NA"
+                alt="A visual representation of n-type doping." title="CLICK FOR SOURCE" style="width: 28%">
+        </a>
+    </div>
+    <p class="details">
+        <u>N-Type Doping</u> - in n-type semiconductors, the “n” meaning “negative,” carrying a negative charge,
+        elements with
+        five valence electrons are introduced into the crystal lattice structure, generally phosphorus (P), arsenic
+        (As), or antimony (Sb) of Group XV on the periodic table (though most commonly phosphorous). Phosphorus has five
+        electrons in its outer valence shell, not four, yet is atomically similar enough to fit into its lattice
+        structure, meaning if small amounts of it are introduced to the lattice, it can easily bond with the surrounding
+        silicon. However, because it has five valence electrons, not four, one electron is not involved in chemical
+        bonding. The extra electron is suspended near the phosphorus atom. Because it is not involved in bonding, it
+        takes very little energy to make the electron leave, making it free to move throughout the lattice
+        structure;<sup><a href="#12">[12]</a></sup> the other four are bonded to the surrounding pure silicon.<sup><a
+                href="#13">[13]</a></sup> To the left
+        is a
+        visual representation of this process.
+    </p>
+    <br>
+    <br>
+    <div class="container">
+        <a href="https://eng.libretexts.org/Bookshelves/Materials_Science/Supplemental_Modules_(Materials_Science)/Solar_Basics/D._P-N_Junction_Diodes/I._P-Type%2C_N-Type_Semiconductors"
+            target="blank">
+            <img class="right" src="https://eng.libretexts.org/@api/deki/files/3290/P-type_semiconductor.jpg?revision=1"
+                alt="A visual representation of p-type doping." title="CLICK FOR SOURCE" style="width: 28%">
+        </a>
+    </div>
+    <p class="details">
+        <u>P-Type Doping</u> - in p-type semiconductors, the “p” meaning “positive,” carrying a positive charge,
+        elements with
+        three valence electrons in Group XIII are introduced to the crystal lattice structure (usually boron [B], as its
+        atomic size makes it chemically compatible with silicon, making it suitable for substitution into the silicon
+        lattice without causing significant distortions or defects). When mixed into the silicon lattice, they form
+        “holes” in the lattice,<sup><a href="#14">[14]</a></sup> or places where electrons are not present but should be
+        (spots of
+        vacancy), because, again, boron only contains three valence electrons, one less electron than is required to
+        bond with each of its surrounding silicon atoms.<sup><a href="#12">[12]</a></sup><sup><a
+                href="#15">[15]</a></sup> P-type semiconductors are
+        positive because the holes they form lack an electron to fill the space.<sup><a href="#16">[16]</a></sup>
+    </p>
+    <br>
+    <br>
+    <h1 class="sectionHeader" id="Junctions" style="font-size: 30px">P—N Junctions, the PV Effect, and Generation</h1>
+    <p class="details">
+        N-type and p-type semiconductors work to improve silicon’s electrical conductivity; the n-type semiconductors
+        add electrons and the p-type semiconductors provide spaces for the electrons to fill.
+        <i>But what does this all mean?</i>
+    </p>
+    <br>
+    <br>
+    <div class="container">
+        <a href="https://www.acs.org/education/resources/highschool/chemmatters/past-issues/archive-2013-2014/how-a-solar-cell-works.html"
+            target="blank">
+            <img class="left"
+                src="https://www.acs.org/content/acs/en/education/resources/highschool/chemmatters/past-issues/archive-2013-2014/how-a-solar-cell-works/_jcr_content/bottomContent/mainContent/columnsbootstrap/column0/image.img.jpg/1396892840222.jpg"
+                alt="A depiction of a p-n junction." title="CLICK FOR SOURCE" style="width: 30%">
+        </a>
+    </div>
+    <p class="details">
+        Together, both types of semiconductors form areas called p-n junctions, areas of contact between the two
+        materials. Solar cells contain a thin layer of an n-type semiconductor situated atop a thin layer of an n-type
+        semiconductor. Areas near p-n junctions have holes from p-type semiconductors and an abundance of electrons near
+        n-type semiconductors. Because they are attracted to each other, the extra electrons in the n-type semiconductor
+        fill the extra holes in the p-type semiconductor, and the area near p-n junctions forms a depletion layer, a
+        region where there are no mobile charge carriers (i.e. no holes and no extra electrons).<sup><a
+                href="#17">[17]</a></sup> The
+        n-type side of the depletion layer has positively charged ions, while the p-type side has negatively charged
+        ions. The migration of charges forms an electric field across the junction, and, thus, the depletion layer
+        effectively becomes an insulator between the two semiconducting regions, preventing electrons in the n-type
+        layer from entering holes in the p-type layer.<sup><a href="#12">[12]</a></sup><sup><a href="#18">[18]</a></sup>
+        Both sides maintain an equilibrium of
+        holes and electrons.
+    </p>
+    <br>
+    <br>
+    <p class="details">
+        Photoelectric cells can be most aptly described as “electrical sandwiches.” The middle “meat” layer consists of
+        the two topical different types of semiconducting silicon. The “top bun” corresponds to metal contacts that
+        attract photons (from solar rays) and transport electricity. The “bottom bun” corresponds to more metal contacts
+        that are responsible for collecting the electric current generated by the movement of electrons, providing the
+        useful electrical power generated by the solar cell.<sup><a href="#19">[19]</a></sup><sup><a
+                href="#20">[20]</a></sup> Solar cells are then
+        encased in glass, protecting them from physical damage.
+
+    </p>
+    <br>
+    <br>
+    <p class="details">
+        Photons from sunlight incident on a solar cell can either be reflected, absorbed, or pass through the cell; only
+        electrons that are absorbed by the solar cell can produce energy. When photons strike the solar cell, electrons
+        in the n-type silicon are ejected, forming empty holes, and thinning the depletion layer. Electrons travel up
+        from the n-type silicon, leaving a hole that travels back down through the depletion layer to the p-type
+        silicon. If there is a path that current can run through, electrons will flow to the p-type silicon to meet
+        holes. This movement of electrons generates current and voltage and is the process by which solar panels
+        generate power, called the photovoltaic effect.<sup><a href="#21">[21]</a></sup>
+        Think of this process like a battery; a solar panel has a positive and negative end, just like a battery, so
+        electrons flow in a specific direction.
+    </p>
+    <br>
+    <br>
+    <h1 class="sectionHeader" id="Benefits" style="font-size: 30px">Benefits and Pitfalls</h1>
+    <p class="details">
+        Solar energy is sustainable, renewable, and plentiful; at its most fundamental level, solar panels can generate
+        electricity for as long as the Sun exists, which scientists estimate to be at least another 5 billion years.
+        Because they have no moving parts, solar panels are relatively low maintenance; the only thing people need to
+        consider when using solar panels is whether they have access to direct sunlight. Because they can be installed
+        on nearly any surface, they are portable and can enable the generation of renewable energy in areas where it is
+        not possible to produce energy from other sources. Solar panels can be functional for at least 20–25 years after
+        initial installation, meaning that they can last for decades. On average, solar panels break even 6–10 years
+        after initial installation; solar panels can lower the average monthly utility bill of homeowners, and houses
+        entirely reliant on solar panels can operate when the grid goes down. Solar energy is safe, effectively
+        unlimited, and not harmful to the environment, and all of the solar energy that reaches Earth is sufficient to
+        meet all the energy needs of the population and economy of the world. <sup><a href="#22">[22]</a></sup><sup><a
+                href="#23">[23]</a></sup>
+    </p>
+    <br>
+    <br>
+    <p class="details">
+        However, solar energy production does not come without its disadvantages. Solar panels gradually lose their
+        efficiency as temperatures rise, their optimal temperature is approximately 25 degrees Celsius; for every
+        one-degree increase in temperature, the effectiveness of solar panels decreases by 0.5%.<sup><a
+                href="#24">[24]</a></sup>
+        Weather changes can affect the rate of solar energy production, and, obviously, they are unable to generate
+        energy at night because they are entirely dependent on sunlight to function (generally, the energy output is
+        highest in the Summer, when energy surpluses are at a maximum, and lowest in the Winter, where energy
+        consumption is at its highest, which can attest to its seasonal limitations). However, even in ideal conditions,
+        efficiency generally sits around 15%–20%.<sup><a href="#25">[25]</a></sup> Solar cells can only accept
+        low-energy photons such
+        as those from red light waves and can not efficiently process high-energy light waves.<sup><a
+                href="#26">[26]</a></sup> To many, because of
+        the high costs associated with initial solar investments solar panels are inaccessible. Energy production is
+        directly proportional to the size of the panel and the amount of sunlight they have access to, meaning obstacles
+        and shadows must be eliminated to fully take advantage of energy production. This means that, though solar
+        panels can be attached to almost any surface, many locations are not optimal for energy production; solar farms
+        often clear large areas, causing the loss of vegetation and, consequently, countless animal habitats. The
+        pollution generated by solar panels, though negligible, is still linked to environmental pollution. There are
+        environmental costs associated with the production, transportation, and installation of solar panels, albeit
+        indirect. Solar panels are not a perfect solution to pollution generated by traditional energy production,
+        however, they can help reduce greenhouse gas emissions and aid in the gradual shift to a more sustainable
+        future.
+        <sup><a href="#22">[22]</a></sup><sup><a href="#27">[27]</a></sup>
+
+    </p>
+
+    <div class="divider"></div>
+
+    <h1 class="sectionHeader" id="Sources" style="font-size: 30px; margin-bottom: 40px;">Sources</h1>
+    <a class="links" id="1" href="https://www.nasa.gov/wp-content/uploads/2015/03/135642main_balance_trifold21.pdf"
+        target="blank">
+        1. The Balance of Power in the Earth-Sun System (nasa.gov)</a>
+    <br>
+    <a class="links" id="2" href="https://www.energy.gov/eere/clean-energy-job-creation-and-growth" target="blank">
+        2. Clean Energy Job Creation and Growth (energy.gov)</a>
+    <br>
+    <a class="links" id="3"
+        href="https://www.linkedin.com/pulse/illuminating-future-how-solar-power-can-solve-global-hasan-mba-54hrc"
+        target="blank">
+        3. Illuminating the Future: How Solar Power Can Solve the Global Energy Crisis. (linkedin.com)</a>
+    <br>
+    <a class="links" id="4" href="https://www.renewableenergyhub.co.uk/blog/is-solar-the-solution-to-the-energy-crisis"
+        target="blank">
+        4. Is Solar the Solution to the Energy Crisis (renewableenergyhub.co.uk)</a>
+    <br>
+    <a class="links" id="5"
+        href="https://www.wevolver.com/article/silicon-semiconductor-a-comprehensive-guide-to-silicon-and-its-use-in-semiconductor-technology"
+        target="blank">
+        5. Silicon Semiconductor: A Comprehensive Guide to Silicon and its Use in Semiconductor Technology
+        (wevolver.com)</a>
+    <br>
+    <a class="links" id="6" href="https://www.ansys.com/blog/what-is-an-integrated-circuit" target="blank">
+        6. What is an Integrated Circuit (IC)? (ansys.com)</a>
+    <br>
+    <a class="links" id="7" href="https://www.semiconductors.org/semiconductors-101/what-is-a-semiconductor/"
+        target="blank">
+        7. What is a Semiconductor? (semiconductors.org)</a>
+    <br>
+    <a class="links" id="8" href="https://energyeducation.ca/encyclopedia/Semiconductor" target="blank">
+        8. Semiconductor (energyeducation.ca)</a>
+    <br>
+    <a class="links" id="9" href="https://www.lenovo.com/us/en/glossary/silicon-chip/" target="blank">
+        9. What is a silicon chip? (lenovo.com)</a>
+    <br>
+    <a class="links" id="10" href="https://www.rsc.org/periodic-table/element/14/silicon" target="blank">
+        10. Silicon (rsc.org)</a>
+    <br>
+    <a class="links" id="11"
+        href="https://www.sciencedirect.com/science/article/abs/pii/S1566119915301142?fr=RR-2&ref=pdf_download&rr=873e305d18b34345"
+        target="blank">
+        11. Effects of doping at the ppm level in Simple n<sup>+</sup>p-homojunction organic photovoltaic cells
+        (sciencedirect.com)</a>
+    <br>
+    <a class="links" id="12"
+        href="https://www.acs.org/education/resources/highschool/chemmatters/past-issues/archive-2013-2014/how-a-solar-cell-works.html"
+        target="blank">
+        12. How a Solar Cell Works
+        (acs.org)</a>
+    <br>
+    <a class="links" id="13"
+        href="https://toshiba.semicon-storage.com/us/semiconductor/knowledge/e-learning/discrete/chap1/chap1-3.html"
+        target="blank">
+        13. n-type Semiconductor
+        (toshiba.semicon-storage.com)</a>
+    <br>
+    <a class="links" id="14"
+        href="https://depts.washington.edu/matseed/mse_resources/Webpage/Computer/Links/CPU/CPU%20made/doping.htm"
+        target="blank">
+        14. Doping
+        (depts.washington.edu)</a>
+    <br>
+    <a class="links" id="15"
+        href="https://eng.libretexts.org/Bookshelves/Materials_Science/Supplemental_Modules_(Materials_Science)/Solar_Basics/D._P-N_Junction_Diodes/I._P-Type%2C_N-Type_Semiconductors"
+        target="blank">
+        15. P-Type, N-Type Semiconductors
+        (eng.libretexts.org)</a>
+    <br>
+    <a class="links" id="16"
+        href="https://www.solarpowerworldonline.com/2018/07/the-difference-between-n-type-and-p-type-solar-cells/"
+        target="blank">
+        16. The difference between n-type and p-type solar cells
+        (solarpowerworldonline.com)</a>
+    <br>
+    <a class="links" id="17"
+        href="https://toshiba.semicon-storage.com/us/semiconductor/knowledge/e-learning/discrete/chap1/chap1-6.html"
+        target="blank">
+        17. What is a pn Junction?
+        (toshiba.semicon-storage.com)</a>
+    <br>
+    <a class="links" id="18" href="https://www.livescience.com/41995-how-do-solar-panels-work.html" target="blank">
+        18. How do solar panels work?
+        (livescience.com)</a>
+    <br>
+    <a class="links" id="19"
+        href="https://engineering.nyu.edu/news/materials-sandwich-breaks-barrier-solar-cell-efficiency" target="blank">
+        19. Materials “Sandwich” Breaks Barrier For Solar Cell Efficiency
+        (engineering.nyu.edu)</a>
+    <br>
+    <a class="links" id="20" href="https://www.altairsolar.com/how-do-solar-panels-work/" target="blank">
+        20. How Do Solar Panels Work?
+        (altairsolar.com)</a>
+    <br>
+    <a class="links" id="21" href="https://science.howstuffworks.com/environmental/energy/solar-cell.htm"
+        target="blank">
+        21. How Do Solar Panels Work?
+        (science.howstuffworks.com)</a>
+    <br>
+    <a class="links" id="22" href="https://journals.ukim.mk/index.php/jafes/article/view/1884/1557" target="blank">
+        22. ADVANTAGES AND DISADVANTAGES OFSOLAR ENERGY PRODUCTION AND USE
+        (journals.ukim.mk)</a>
+    <br>
+    <a class="links" id="23" href="https://www.energy.gov/energysaver/articles/5-benefits-residential-solar"
+        target="blank">
+        23. 5 Benefits of Residential Solar
+        (energy.gov)</a>
+    <br>
+    <a class="links" id="24" href="https://blog.ecoflow.com/us/effects-of-temperature-on-solar-panel-efficiency/"
+        target="blank">
+        24. The Impact of Temperature on Solar Panel Efficiency: How Heat Affects Your Solar Energy System
+        (blog.ecoflow.com)</a>
+    <br>
+    <a class="links" id="25" href="https://www.greenmatch.co.uk/blog/2014/11/how-efficient-are-solar-panels"
+        target="blank">
+        25. How Efficient Are Solar Panels in the UK?
+        (greenmatch.co.u)</a>
+    <br>
+    <a class="links" id="26"
+        href="https://news.mit.edu/2016/new-solar-cell-more-efficient-costs-less-its-counterparts-0829" target="blank">
+        26. New solar cell is more efficient, costs less than its counterparts
+        (news.mit.edu)</a>
+    <br>
+    <a class="links" id="27" href="https://solareis.anl.gov/guide/environment/" target="blank">
+        27. Solar Energy Development Environmental Considerations
+        (news.mit.edu)</a>
+
+    <div class="footer">
+        <div class="footer-heading-1">
+            <h1 class="footerPurpose">
+                Purpose
+            </h1>
+
+            <p class="footerDescription">
+                We aim to inform readers about the alternative energy sources in the United States and how they work.
+                There's nothing more to it.
+            </p>
+        </div>
+        <div class="footer-heading-2">
+            <h1 class="footerPurpose">
+                Credits
+            </h1>
+            <p class="footerDescription">Andy Dong</p>
+            <p class="footerDescription">Jayden Chang</p>
+            <p class="footerDescription">Stephan Saykin</p>
+        </div>
+        <div class="footer-heading-3">
+            <h1 class="footerPurpose">
+                Connect with FLHS
+            </h1>
+            <p class="footerDescription">When we find them, we'll provide them ¯\_(ツ)_/¯. All I know is that we have an
+                insta, but idk if there's anything else, soooooo...</p>
+        </div>
+    </div>
+</body>
+
+</html>
